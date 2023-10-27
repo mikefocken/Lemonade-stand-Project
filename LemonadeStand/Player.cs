@@ -9,6 +9,7 @@ namespace LemonadeStand
     class Player
     {
         // member variables (HAS A)
+        public Player name;
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
@@ -19,9 +20,11 @@ namespace LemonadeStand
             inventory = new Inventory();
             wallet = new Wallet();
             recipe = new Recipe();
+            name = new Player();
         }
 
         // member methods (CAN DO)
-
+       //   change  receipe 
+         //buys supplies
     }
 }
