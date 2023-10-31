@@ -14,6 +14,8 @@ namespace LemonadeStand
         public Day()
         {
             customers = new List<Customer>();
+            Console.WriteLine("This weeks Weather report+{List});");
+            Console.WriteLine("Today's forecast will be {new Day});");
         }
         //public void StartDay();
 
@@ -26,27 +28,25 @@ namespace LemonadeStand
             }
         }
 
-        public int SimulatingCustomersWalkingBy(double lemonadePrice)
-        {
-            int customersWhoBought = 0;
-            foreach (Customer customer in customers)
-            {
-                if (customer.WillBuyLemonade(lemonadePrice))
-                {
-                    Console.WriteLine("A customer bought Lemonade.");
-                    customersWhoBought++;
-                }
+       // public int SimulatingCustomersWalkingBy(double lemonadePrice)
+        ////{
+        ////    int customersWhoBought = 0;
+        ////    foreach (Customer customer in customers)
+        ////    {
+        ////       // if (customer.WillBuyLemonade(lemonadePrice))
+        ////        {
+        ////            Console.WriteLine("A customer bought Lemonade.");
+        ////            customersWhoBought++;
+        ////        }
 
-                else
-                {
-                    Console.WriteLine("A customer walked away.");
-                }
+        ////        else
+        ////        {
+        ////            Console.WriteLine("A customer walked away.");
+        ////        }
 
-
-
-            }
-            return customersWhoBought;
-        }    
+        ////    }
+        ////    return customersWhoBought;
+        ////}    
         public void CalculateNumOfCustomer()
         {
                 if (true) 
@@ -55,7 +55,12 @@ namespace LemonadeStand
                 else if (true)
                  {
 
-                  }
+                 }
+
+
+
+
+
 
 
         }

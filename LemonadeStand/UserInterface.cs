@@ -26,7 +26,7 @@ namespace LemonadeStand
 
         public static int GetNumberOfPitchers()
         {
-            bool userInputIsAnInteger = false;
+            bool userInputIsAnInte = false;
             int quantityOfItem = -1;
 
             while (!userInputIsAnInteger || quantityOfItem < 0)

@@ -23,33 +23,36 @@ namespace LemonadeStand
 
         public Weather()
         {
-            weatherConditions =  new List<string> { "Sunny", "Cloudy", "Rainy", "overcast"};
-          
+            weatherConditions =  new List<string> { "Sunny", "Cloudy", "Rainy" };
+            
+
             random = new Random();
+           
         }
 
+
         // Member methods(Can do)
-       
-        public void DetermineWeather()
+
+        public void determineWeather()
+
         {
             //Give a value to conditions and temperature member variables
             //Use Random to assign a random number to temperature and random item from list to condition
-
             //temperature = random number between 60-100
             //condition = random item from list
-            temperature = random.Next ( 60, 100);
+            temperature = random.Next(60, 100);
             int randomIndex = random.Next(weatherConditions.Count);
             condition=weatherConditions[randomIndex];
-           
+            //return (Day);
         }
-
-           
-
-
-
-        
 
 
     }
 
- }   
+
+
+
+
+
+
+}    
