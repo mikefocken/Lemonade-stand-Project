@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    internal class game
+    internal class Game
     {
         //member variable(has a)
         Player player;
@@ -17,7 +17,7 @@ namespace LemonadeStand
 
 
         //constructor 
-        public game()
+        public Game()
         {
             days=new List<Day>();
             Day day1 = new Day();

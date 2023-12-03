@@ -33,7 +33,7 @@ namespace LemonadeStand
 
         // Member methods(Can do)
 
-        public void determineWeather()
+        public void DetermineWeather()
 
         {
             //Give a value to conditions and temperature member variables

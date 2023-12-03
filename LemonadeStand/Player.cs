@@ -12,7 +12,7 @@ namespace LemonadeStand
     class Player
     {
         // member variables (HAS A)
-        public Player name;
+        public String name;
         public Inventory inventory;
         public Wallet wallet;
         public Recipe recipe;
@@ -23,35 +23,38 @@ namespace LemonadeStand
             inventory = new Inventory();
             wallet = new Wallet();
             recipe = new Recipe();
-            name = new Player();
+            name = "Mike";
         }
 
         // member methods (CAN DO)
-        //   the goal is to ask the player if they want to change their lemonade receipe.
-        // make changes
-
-        abstract bool makeChangeToRecipe();
-        bool yes = true;
-
-        Console.WriteLine ($"If you would like to change your recipe for a pitcher of Lemondae, please enter yes or no");
-                return();
-
-             if/ bool playerWantsToChangeReceipe()
+        public bool MakeChangeToRecipe()
         {
-
-            return true;
+            bool changeRecipe = true;
+            Console.WriteLine($"If your would like to change your receipe for a pitcher of Lemonade, please enter a yes or no.");
+            string yesNo = Console.ReadLine();
+            while (yesNo !="yes" || yesNo !="no")
+            {
+                Console.WriteLine($"{yesNo} was not a valid selection, please enter a yes or no.");
+                yesNo = Console.ReadLine().ToLower();
+            }
+            if (yesNo == "yes")
+            {
+                changeRecipe = true;
+            }
+            return changeRecipe;
 
         }
 
-       
 
-           
+    }
+
+}      
          
         
 
 
         
-    }
+    
 
               //  numberOfLemons = 2;
              //  numberOfSugarCubes = 4;
@@ -62,4 +65,4 @@ namespace LemonadeStand
         
          // Buy supplies= the goal is for the player to buy more supplies 
     
-}
+
