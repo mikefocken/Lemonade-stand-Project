@@ -12,8 +12,8 @@ namespace LemonadeStand
     {
 
         //member variable(has a)
-        string condition;
-        int temperature;
+        public string condition;
+        public int temperature;
         List<string> weatherConditions;
         string predictForecast;
         Random random;
@@ -24,17 +24,12 @@ namespace LemonadeStand
         public Weather()
         {
             weatherConditions =  new List<string> { "Sunny", "Cloudy", "Rainy" };
-            
-
             random = new Random();
            
         }
-
-
         // Member methods(Can do)
 
         public void DetermineWeather()
-
         {
             //Give a value to conditions and temperature member variables
             //Use Random to assign a random number to temperature and random item from list to condition
@@ -42,7 +37,7 @@ namespace LemonadeStand
             //condition = random item from list
             temperature = random.Next(60, 100);
             int randomIndex = random.Next(weatherConditions.Count);
-            condition=weatherConditions[randomIndex];
+            condition = weatherConditions[randomIndex];
             //return (Day);
         }
 

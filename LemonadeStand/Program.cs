@@ -14,9 +14,10 @@
 
 
             Console.WriteLine("Welcome to Mike's Summertime Lemonade stand");
-
-            Customer customer = new Customer();
-            customer.WillBuyLemonade(.1, "Sunny", 90);
+            Game newGame = new Game();
+            newGame.Startgame();
+           // Store store = new Store();
+           //Player player = new Player();
 
 
         }

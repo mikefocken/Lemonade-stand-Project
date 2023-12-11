@@ -14,42 +14,31 @@ namespace LemonadeStand
         Player player;
         List<Day> days;
         int currentDay;
-
+        Store store;
 
         //constructor 
         public Game()
         {
             days=new List<Day>();
-            Day day1 = new Day();
-            days.Add(day1);
-            Day day2 = new Day();
-            days.Add(day2);
-            Day day3 = new Day();
-            days.Add(day3);
-            Day day4 = new Day();
-            days.Add(day4);
-            Day day5 = new Day();
-            days.Add(day5);
-            Day day6 = new Day();
-            days.Add(day6);
-            Day day7 = new Day();
-            days.Add(day7);
-
+            store=new Store();
             player=new Player();
 
-            for (int i = 0; i < 8;i++)
+            for (int i=0; i<8; i++)
             {
-                Console.WriteLine($"Hello here is todays forecast (new Day) Value of i {i}");
+                Day newDay = new Day();
+                days.Add(newDay);
             }
-
-
-            
-
-
-
         }
         
-        
+        public void Startgame()
+        {
+            foreach( Day day in days)
+            {
+
+            }
+
+        }
+
                               ///member method (Can do)
             
                        
