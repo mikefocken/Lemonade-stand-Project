@@ -46,46 +46,24 @@ namespace LemonadeStand
       
         }
 
-        public void make ChangeToPrice()
+        public void MakeChangePricePerCup()
         {
-            DisplayPricePerCup();
-         Console.WriteLine($"If you would like to change the price you are charging for a cup a lemonade please enter 'yes' or 'no'")
-            Constring yesNo = Console.ReadLine();
+            recipe.DisplayRecipe();
+            Console.WriteLine($"If you would like to change the price you are charging for a cup a lemonade please enter 'yes' or 'no'");
+            string yesNo = Console.ReadLine().ToLower();
 
+            while ( yesNo !="yes" || yesNo !="no")
+            {
+                Console.WriteLine($"{yesNo} was not a valid selection, please enter a yes or no.");
+                yesNo = Console.ReadLine().ToLower();
 
-
-            ;
-                response = Console.ReadLine().ToLower();
-
-                if (response == "yes")
-                {
-                    Console.WriteLine("How much would you like to charge for a cup of Lemonade?");
-                    string stringNum = Console.ReadLine();
-
-                    if (double.TryParse(stringNum, out double newPrice))
-                    {
-                        price =newPrice;
-                        Console.WriteLine($"Price updated to {price} per cup of lemonade.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid numerical value for the price ( e.g., ,45 or 1.35).");
-                    }
-
-                }
-
-            } while (response =="yes");
-
-
-
-
-
+            }
+            if (yesNo == "yes")
+            {
+                recipe.ChangePricePerCup();
+            }
 
         }
-
-
-
-
 
     }
 
@@ -97,13 +75,8 @@ namespace LemonadeStand
         
     
 
-              //  numberOfLemons = 2;
-             //  numberOfSugarCubes = 4;
-            // numberOfIceCubes = 10;
-            // price = 1; 
 
 
-        
-         // Buy supplies= the goal is for the player to buy more supplies 
+      
     
 

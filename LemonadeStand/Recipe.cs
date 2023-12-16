@@ -65,41 +65,28 @@ namespace LemonadeStand
 
         }
 
-        public void DisplayPricePerCup()
-        {
-           
-            Console.WriteLine($"You are currently charging {price} per cup of lemonade.");
-        }
-
         public void ChangePricePerCup()
         {
-
-            string response;
-
-            do
+            string yesNO = "yes";
+            while (yesNO== "yes")
             {
-                DisplayPricePerCup();
-                Console.WriteLine($"If you would like to change the price you are charging for a cup a lemonade please enter 'yes' or 'no'");
-                response = Console.ReadLine().ToLower();
+                DisplayRecipe();
+                Console.WriteLine("What would you like the price for a cup of lemonade to be? Please use a numerical value like example (e.g. .45 or 1.35)");
+                string response = Console.ReadLine();
 
-                if (response == "yes")
+                if (double.TryParse(response, out double newPrice))
                 {
-                    Console.WriteLine("How much would you like to charge for a cup of Lemonade?");
-                    string stringNum = Console.ReadLine();
-
-                    if (double.TryParse(stringNum, out double newPrice))
-                    {
-                        price =newPrice;
-                        Console.WriteLine($"Price updated to {price} per cup of lemonade.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid input. Please enter a valid numerical value for the price ( e.g., ,45 or 1.35).");
-                    }
-
+                    price= newPrice;
+                    Console.WriteLine($"Price updated to {price} per cup of lemonade.");
                 }
+                else 
+                {
+                    Console.WriteLine("Invalid input.Please use a numerical value like example (e.g. .45 or 1.35)");
+                }
+                Console.WriteLine("Would you like to change the price again? enter 'yes' or 'No' ");
+                yesNO =Console.ReadLine().ToLower();
 
-            } while (response =="yes");
+            } 
 
         }
 

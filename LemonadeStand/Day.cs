@@ -33,7 +33,7 @@ namespace LemonadeStand
             int customersWhoBought = 0;
             foreach (Customer customer in customers)
             {
-                if (customer.WillBuyLemonade(lemonadePrice, weather.condition,weather.temperature))
+                if (customer.WillBuyLemonade(lemonadePrice, weather.Condition,weather.Temperature))
                 {
                     Console.WriteLine("A customer bought Lemonade.");
                     customersWhoBought++;
